@@ -30,6 +30,9 @@ export default makeStyles({
       title: {
         padding: '0 16px',
       },
+      activeCards:{
+borderBottom:'10px solid blue',
+      },
       cardActions: {
         padding: '0 16px 8px 16px',
         display: 'flex',

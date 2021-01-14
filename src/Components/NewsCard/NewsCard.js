@@ -1,13 +1,13 @@
 import React from 'react'
 import useStyle from './Style.js'
+import classNames from 'classnames'
 import {Card,CardActionArea,CardContent,Button,Typography,CardActions,CardMedia} from '@material-ui/core'
-const NewsCard = ({article:{description,author,title,url,urlToImage,publishedAt,content,source},i}) => {
+const NewsCard = ({article:{description,author,title,url,urlToImage,publishedAt,content,source},i,activearticle}) => {
     const classes=useStyle();
    
-    
     return (
         
-        <Card className={classes.card}>
+        <Card  className={classNames(classes.card,activearticle===i?classes.activeCards:null)}>
             <CardActionArea href={url} target="_blank" >
                 <CardMedia className={classes.media} image={urlToImage}/>
                 <div className={classes.details}>
